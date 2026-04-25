@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تعبير | حقائب نسائية فاخرة في السعودية</title>
+  <meta name="description" content="تعبير — اختلافك تعبيرك. مجموعة مختارة بعناية من الحقائب النسائية الفاخرة." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ========================
+       DESIGN SYSTEM — TABEER
+       ======================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --radius: 0.25rem;
+      --cream:            oklch(0.97 0.012 80);
+      --cream-deep:       oklch(0.94 0.018 80);
+      --mocha:            oklch(0.32 0.035 50);
+      --mocha-soft:       oklch(0.45 0.04  45);
+      --rose:             oklch(0.78 0.06  25);
+      --gold:             oklch(0.72 0.11  75);
+      --gold-deep:        oklch(0.58 0.12  70);
+
+      --background:          oklch(0.97 0.012 80);
+      --foreground:          oklch(0.22 0.025 50);
+      --card:                oklch(0.99 0.006 80);
+      --card-foreground:     oklch(0.22 0.025 50);
+      --primary:             oklch(0.32 0.035 50);
+      --primary-foreground:  oklch(0.97 0.012 80);
+      --secondary:           oklch(0.94 0.018 80);
+      --secondary-foreground:oklch(0.32 0.035 50);
+      --muted:               oklch(0.94 0.018 80);
+      --muted-foreground:    oklch(0.5  0.03  50);
+      --accent:              oklch(0.72 0.11  75);
+      --accent-foreground:   oklch(0.22 0.025 50);
+      --destructive:         oklch(0.55 0.2   25);
+      --destructive-foreground: oklch(0.97 0.012 80);
+      --border:              oklch(0.88 0.018 70);
+      --shadow-soft:    0 10px 40px -15px oklch(0.32 0.035 50 / 0.15);
+      --shadow-elegant: 0 25px 60px -20px oklch(0.32 0.035 50 / 0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--background);
+      color: var(--foreground);
+      font-family: 'Tajawal', 'Cairo', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Playfair Display', 'Amiri', serif;
+      letter-spacing: -0.01em;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    input, textarea { font-family: inherit; }
+
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ========================
+       ANIMATIONS
+       ======================== */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up { animation: fade-up 0.8s cubic-bezier(0.4,0,0.2,1) both; }
+
+    /* ========================
+       PAGE ROUTING
+       ======================== */
+    .page { display: none; flex-direction: column; min-height: 100vh; }
+    .page.active { display: flex; }
+
+    /* ========================
+       HEADER
+       ======================== */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(12px);
+      background: oklch(0.97 0.012 80 / 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 5rem;
+    }
+    .logo { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; cursor: pointer; }
+    .logo-ar { font-family: 'Playfair Display','Amiri',serif; font-size: 1.875rem; color: var(--primary); letter-spacing: -0.01em; }
+    .logo-en { font-size: 0.625rem; color: var(--muted-foreground); letter-spacing: 0.3em; margin-top: 0.25rem; }
+
+    nav { display: flex; align-items: center; gap: 2.5rem; }
+    nav a {
+      font-size: 0.875rem; color: oklch(0.22 0.025 50 / 0.8);
+      transition: color 0.2s;
+    }
+    nav a:hover, nav a.active { color: var(--accent); }
+
+    .header-actions { display: flex; align-items: center; gap: 1rem; }
+    .icon-btn {
+      color: oklch(0.22 0.025 50 / 0.7); transition: color 0.2s;
+      background: none; border: none; cursor: pointer; position: relative;
+    }
+    .icon-btn:hover { color: var(--accent); }
+    .icon-btn svg { width: 1.25rem; height: 1.25rem; }
+    .cart-badge {
+      position: absolute; top: -0.25rem; right: -0.5rem;
+      background: var(--accent); color: var(--accent-foreground);
+      font-size: 0.625rem; width: 1rem; height: 1rem;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 600;
+    }
+
+    /* Mobile nav */
+    .mobile-menu-btn { display: none; }
+    .mobile-nav {
+      display: none; flex-direction: column; gap: 0;
+      background: var(--background); border-top: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      padding: 0.75rem 0; border-bottom: 1px solid var(--border);
+      font-size: 0.9375rem; color: var(--foreground);
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .mobile-menu-btn { display: block; }
+    }
+
+    /* ========================
+       HERO
+       ======================== */
+    .hero-section { position: relative; overflow: hidden; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      align-items: center; padding: 4rem 0 6rem;
+    }
+    .hero-content { display: flex; flex-direction: column; gap: 2rem; order: 2; }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; letter-spacing: 0.3em; color: var(--accent);
+    }
+    .hero-label-line { width: 2rem; height: 1px; background: var(--accent); }
+    .hero-title { font-family: 'Playfair Display','Amiri',serif; font-size: clamp(3rem,7vw,5rem); color: var(--primary); line-height: 1.05; }
+    .hero-title em { font-style: italic; color: var(--accent); }
+    .hero-desc { font-size: 1.125rem; color: var(--muted-foreground); line-height: 1.8; max-width: 28rem; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn-primary {
+      background: var(--primary); color: var(--primary-foreground);
+      padding: 1rem 2rem; font-size: 0.875rem; letter-spacing: 0.15em;
+      transition: background 0.2s; white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--mocha-soft); }
+    .btn-outline {
+      border: 1px solid oklch(0.32 0.035 50 / 0.2); color: var(--primary);
+      padding: 1rem 2rem; font-size: 0.875rem; letter-spacing: 0.15em;
+      transition: all 0.2s; white-space: nowrap;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+    .hero-stats { display: flex; gap: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .stat-num { font-family: 'Playfair Display','Amiri',serif; font-size: 1.875rem; color: var(--primary); }
+    .stat-label { font-size: 0.75rem; color: var(--muted-foreground); margin-top: 0.25rem; }
+
+    .hero-image { position: relative; order: 1; }
+    .hero-image .glow-1 {
+      position: absolute; top: -1rem; right: -1rem;
+      width: 8rem; height: 8rem;
+      background: oklch(0.72 0.11 75 / 0.1); border-radius: 50%; filter: blur(48px);
+    }
+    .hero-image .glow-2 {
+      position: absolute; bottom: -2rem; left: -2rem;
+      width: 12rem; height: 12rem;
+      background: oklch(0.78 0.06 25 / 0.2); border-radius: 50%; filter: blur(48px);
+    }
+    .hero-img-wrap {
+      position: relative; aspect-ratio: 3/4; overflow: hidden;
+    }
+    .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-badge {
+      position: absolute; bottom: 1.5rem; right: 1.5rem;
+      background: oklch(0.97 0.012 80 / 0.95); backdrop-filter: blur(8px);
+      padding: 1.25rem; max-width: 12.5rem;
+      box-shadow: var(--shadow-elegant);
+    }
+    .hero-badge-label { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 0.5rem; }
+    .hero-badge-name { font-family: 'Playfair Display','Amiri',serif; font-size: 1.125rem; color: var(--primary); }
+    .hero-badge-price { font-size: 0.875rem; color: var(--muted-foreground); margin-top: 0.25rem; }
+
+    /* ========================
+       FEATURES STRIP
+       ======================== */
+    .features-strip {
+      background: oklch(0.94 0.018 80 / 0.4);
+      padding: 2rem 0;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .features-inner {
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-around; gap: 1.5rem; text-align: center;
+    }
+    .feature-ar { font-size: 0.875rem; font-weight: 500; color: var(--primary); }
+    .feature-en { font-size: 0.625rem; letter-spacing: 0.25em; color: var(--muted-foreground); margin-top: 0.25rem; }
+
+    /* ========================
+       SECTION HEADERS
+       ======================== */
+    .section-tag { font-size: 0.75rem; letter-spacing: 0.3em; color: var(--accent); }
+    .section-title { font-family: 'Playfair Display','Amiri',serif; font-size: clamp(2rem,4vw,3rem); color: var(--primary); }
+
+    /* ========================
+       PRODUCT CARDS
+       ======================== */
+    .products-section { padding: 6rem 0; }
+    .products-header {
+      display: flex; flex-wrap: wrap; align-items: flex-end;
+      justify-content: space-between; gap: 1.5rem; margin-bottom: 4rem;
+    }
+    .view-all {
+      font-size: 0.875rem; color: var(--primary);
+      border-bottom: 1px solid var(--primary);
+      padding-bottom: 0.25rem; transition: all 0.2s; cursor: pointer;
+    }
+    .view-all:hover { color: var(--accent); border-color: var(--accent); }
+
+    .products-grid {
+      display: grid; gap: 1.5rem 2.5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .products-grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .products-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .product-card { display: block; cursor: pointer; }
+    .product-card:hover .product-img-inner { transform: scale(1.05); }
+    .product-card:hover .product-name { color: var(--accent); }
+    .product-card:hover .product-overlay { opacity: 1; }
+
+    .product-img-wrap {
+      position: relative; overflow: hidden;
+      background: var(--secondary); aspect-ratio: 4/5; margin-bottom: 1rem;
+    }
+    .product-img-inner {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    .badge {
+      position: absolute; top: 1rem; right: 1rem;
+      font-size: 0.625rem; letter-spacing: 0.15em; padding: 0.25rem 0.75rem;
+    }
+    .badge-new { background: var(--accent); color: var(--accent-foreground); }
+    .badge-best { background: var(--primary); color: var(--primary-foreground); }
+    .badge-sale {
+      position: absolute; top: 1rem; left: 1rem;
+      background: var(--destructive); color: var(--destructive-foreground);
+      font-size: 0.625rem; letter-spacing: 0.15em; padding: 0.25rem 0.75rem;
+    }
+    .product-overlay {
+      position: absolute; inset-inline: 0; bottom: 0; padding: 1rem;
+      background: linear-gradient(to top, oklch(0.32 0.035 50 / 0.8), transparent);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .product-overlay-btn {
+      width: 100%; background: var(--background); color: var(--foreground);
+      padding: 0.5rem; font-size: 0.875rem; font-weight: 500;
+      transition: all 0.2s; cursor: pointer; border: none; font-family: inherit;
+    }
+    .product-overlay-btn:hover { background: var(--accent); color: var(--accent-foreground); }
+    .product-category { font-size: 0.75rem; color: var(--muted-foreground); letter-spacing: 0.1em; }
+    .product-name {
+      font-family: 'Playfair Display','Amiri',serif; font-size: 1.125rem;
+      color: var(--foreground); transition: color 0.2s; margin-top: 0.25rem;
+    }
+    .product-pricing { display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.25rem; }
+    .product-price { font-weight: 500; }
+    .product-old-price { font-size: 0.875rem; color: var(--muted-foreground); text-decoration: line-through; }
+
+    /* ========================
+       STORY BAND
+       ======================== */
+    .story-band {
+      background: var(--primary); color: var(--primary-foreground);
+      padding: 6rem 0;
+    }
+    .story-band-inner { text-align: center; max-width: 48rem; margin: 0 auto; }
+    .story-quote {
+      font-family: 'Playfair Display','Amiri',serif;
+      font-size: clamp(1.75rem,3.5vw,2.5rem); margin-bottom: 2rem; line-height: 1.4;
+    }
+    .story-text { color: oklch(0.97 0.012 80 / 0.8); line-height: 1.8; font-size: 1.125rem; }
+    .btn-accent-outline {
+      display: inline-block; margin-top: 2.5rem;
+      border: 1px solid var(--accent); color: var(--accent);
+      padding: 1rem 2rem; font-size: 0.875rem; letter-spacing: 0.15em;
+      transition: all 0.2s; cursor: pointer;
+    }
+    .btn-accent-outline:hover { background: var(--accent); color: var(--accent-foreground); }
+
+    /* ========================
+       SHOP PAGE
+       ======================== */
+    .shop-hero {
+      background: oklch(0.94 0.018 80 / 0.4); padding: 4rem 0;
+      border-bottom: 1px solid var(--border); text-align: center;
+    }
+    .shop-filters {
+      display: flex; flex-wrap: wrap; gap: 0.75rem;
+      justify-content: center; margin-bottom: 3rem;
+      padding-bottom: 1.5rem; border-bottom: 1px solid var(--border);
+    }
+    .filter-btn {
+      padding: 0.5rem 1.25rem; font-size: 0.875rem; letter-spacing: 0.05em;
+      transition: all 0.2s; cursor: pointer; border: none; background: none;
+      font-family: inherit; color: var(--muted-foreground);
+    }
+    .filter-btn:hover { color: var(--primary); }
+    .filter-btn.active { background: var(--primary); color: var(--primary-foreground); }
+
+    /* ========================
+       ABOUT PAGE
+       ======================== */
+    .about-hero-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      align-items: center; padding: 5rem 0;
+    }
+    .about-content { display: flex; flex-direction: column; gap: 1.5rem; }
+    .about-title { font-family: 'Playfair Display','Amiri',serif; font-size: clamp(2.5rem,5vw,3.75rem); color: var(--primary); line-height: 1.1; }
+    .about-title em { font-style: italic; color: var(--accent); }
+    .about-text { color: var(--muted-foreground); line-height: 1.9; }
+    .about-img { aspect-ratio: 4/5; overflow: hidden; }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .values-section { background: oklch(0.94 0.018 80 / 0.4); padding: 6rem 0; }
+    .values-header { text-align: center; margin-bottom: 4rem; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .value-card {
+      background: var(--card); padding: 2.5rem; text-align: center;
+      border: 1px solid var(--border);
+    }
+    .value-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem; }
+    .value-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.75rem; }
+    .value-text { color: var(--muted-foreground); line-height: 1.7; }
+
+    .promise-section { padding: 6rem 0; text-align: center; max-width: 40rem; margin: 0 auto; }
+    .promise-title { font-family: 'Playfair Display','Amiri',serif; font-size: clamp(2rem,4vw,3rem); color: var(--primary); margin-bottom: 1.5rem; }
+    .promise-text { color: var(--muted-foreground); line-height: 1.9; font-size: 1.125rem; }
+
+    /* ========================
+       CONTACT PAGE
+       ======================== */
+    .contact-header { text-align: center; margin-bottom: 4rem; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 62.5rem; margin: 0 auto; }
+    .contact-form-card { background: var(--card); padding: 2.5rem; border: 1px solid var(--border); }
+    .form-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 1.5rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label { display: block; font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 0.5rem; }
+    .form-input, .form-textarea {
+      width: 100%; background: var(--background); border: 1px solid var(--border);
+      padding: 0.75rem 1rem; font-size: 0.875rem; font-family: inherit;
+      outline: none; transition: border-color 0.2s; color: var(--foreground);
+    }
+    .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--muted-foreground); }
+    .form-textarea { resize: none; }
+    .btn-form {
+      width: 100%; background: var(--primary); color: var(--primary-foreground);
+      padding: 1rem; font-size: 0.875rem; letter-spacing: 0.15em;
+      cursor: pointer; border: none; font-family: inherit;
+      transition: background 0.2s;
+    }
+    .btn-form:hover { background: var(--mocha-soft); }
+
+    .contact-success { text-align: center; padding: 3rem 0; }
+    .success-icon { font-size: 3rem; color: var(--accent); margin-bottom: 1rem; }
+    .success-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .success-text { color: var(--muted-foreground); }
+
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .info-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .info-sub { color: var(--muted-foreground); }
+    .info-items { display: flex; flex-direction: column; gap: 1.5rem; }
+    .info-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .info-icon {
+      width: 2.5rem; height: 2.5rem; flex-shrink: 0;
+      background: oklch(0.72 0.11 75 / 0.1); color: var(--accent);
+      display: flex; align-items: center; justify-content: center; font-size: 1.125rem;
+    }
+    .info-label { font-size: 0.875rem; color: var(--muted-foreground); }
+    .info-value { color: var(--primary); margin-top: 0.125rem; }
+    .social-card {
+      background: oklch(0.94 0.018 80 / 0.6); padding: 1.5rem;
+      border-right: 2px solid var(--accent);
+    }
+    .social-title { font-family: 'Playfair Display','Amiri',serif; font-size: 1.125rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .social-handle { font-size: 0.875rem; color: var(--muted-foreground); }
+
+    /* ========================
+       FOOTER
+       ======================== */
+    footer {
+      background: var(--primary); color: var(--primary-foreground);
+      margin-top: 8rem;
+    }
+    .footer-inner { padding: 4rem 0; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 3rem; }
+    .footer-brand-name { font-family: 'Playfair Display','Amiri',serif; font-size: 1.875rem; margin-bottom: 0.5rem; }
+    .footer-brand-en { font-size: 0.75rem; letter-spacing: 0.3em; color: oklch(0.97 0.012 80 / 0.6); margin-bottom: 1rem; }
+    .footer-brand-desc { font-size: 0.875rem; color: oklch(0.97 0.012 80 / 0.7); line-height: 1.7; }
+    .footer-heading { font-family: 'Playfair Display','Amiri',serif; font-size: 1.125rem; color: var(--accent); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .footer-links a { font-size: 0.875rem; color: oklch(0.97 0.012 80 / 0.7); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-desc { font-size: 0.875rem; color: oklch(0.97 0.012 80 / 0.7); margin-bottom: 1rem; line-height: 1.6; }
+    .footer-form { display: flex; gap: 0.5rem; }
+    .footer-input {
+      flex: 1; background: oklch(0.97 0.012 80 / 0.1);
+      border: 1px solid oklch(0.97 0.012 80 / 0.2);
+      padding: 0.5rem 0.75rem; font-size: 0.875rem; font-family: inherit;
+      color: var(--primary-foreground); outline: none;
+    }
+    .footer-input::placeholder { color: oklch(0.97 0.012 80 / 0.4); }
+    .footer-input:focus { border-color: var(--accent); }
+    .footer-sub-btn {
+      background: var(--accent); color: var(--accent-foreground);
+      padding: 0.5rem 1rem; font-size: 0.875rem; font-weight: 500;
+      cursor: pointer; border: none; font-family: inherit; transition: opacity 0.2s;
+    }
+    .footer-sub-btn:hover { opacity: 0.9; }
+    .footer-bottom {
+      border-top: 1px solid oklch(0.97 0.012 80 / 0.1);
+      margin-top: 3rem; padding-top: 2rem;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      gap: 1rem; font-size: 0.75rem; color: oklch(0.97 0.012 80 / 0.5);
+    }
+
+    /* ========================
+       RESPONSIVE
+       ======================== */
+    @media (max-width: 1024px) {
+      .products-grid { grid-template-columns: repeat(3,1fr); }
+      .footer-grid { grid-template-columns: repeat(2,1fr); }
+      .values-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; padding: 2rem 0 4rem; }
+      .hero-content { order: 1; }
+      .hero-image { order: 2; }
+      .products-grid, .products-grid-3 { grid-template-columns: repeat(2,1fr); gap: 1rem; }
+      .about-hero-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER (shared)
+     ============================================================ -->
+<header>
+  <div class="container header-inner">
+    <div class="logo" onclick="navigate('home')">
+      <span class="logo-ar">تعبير</span>
+      <span class="logo-en">TA'BEER</span>
+    </div>
+
+    <nav>
+      <a href="#" class="nav-link active" data-page="home" onclick="navigate('home');return false;">الرئيسية</a>
+      <a href="#" class="nav-link" data-page="shop" onclick="navigate('shop');return false;">المتجر</a>
+      <a href="#" class="nav-link" data-page="about" onclick="navigate('about');return false;">عن تعبير</a>
+      <a href="#" class="nav-link" data-page="contact" onclick="navigate('contact');return false;">تواصلي معنا</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="بحث">
+        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.34-4.34M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/>
+        </svg>
+      </button>
+      <button class="icon-btn" aria-label="السلة">
+        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z"/>
+        </svg>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="icon-btn mobile-menu-btn" aria-label="القائمة" onclick="toggleMobileNav()">
+        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#" onclick="navigate('home');return false;">الرئيسية</a>
+    <a href="#" onclick="navigate('shop');return false;">المتجر</a>
+    <a href="#" onclick="navigate('about');return false;">عن تعبير</a>
+    <a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a>
+  </div>
+</header>
+
+<!-- ============================================================
+     PAGE: HOME
+     ============================================================ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <!-- Content -->
+      <div class="hero-content animate-fade-up">
+        <div class="hero-label">
+          <span class="hero-label-line"></span>
+          مجموعة 2026
+        </div>
+        <h1 class="hero-title">
+          اختلافكِ<br/>
+          <em>تعبيركِ</em>
+        </h1>
+        <p class="hero-desc">
+          مجموعة فاخرة من الحقائب النسائية، صُنعت لتكون امتداداً لشخصيتكِ. كل قطعة تروي حكاية، وكل تفصيل يعكس ذوقكِ المميز.
+        </p>
+        <div class="hero-btns">
+          <a class="btn-primary" href="#" onclick="navigate('shop');return false;">تسوّقي المجموعة</a>
+          <a class="btn-outline" href="#" onclick="navigate('about');return false;">قصة تعبير</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="stat-num">+200</div><div class="stat-label">قطعة فاخرة</div></div>
+          <div><div class="stat-num">+15K</div><div class="stat-label">عميلة سعيدة</div></div>
+          <div><div class="stat-num">48س</div><div class="stat-label">توصيل سريع</div></div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-image animate-fade-up">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="hero-img-wrap">
+          <img src="herobag.jpg" alt="مجموعة حقائب تعبير الفاخرة" />
+        </div>
+        <div class="hero-badge">
+          <p class="hero-badge-label">الأكثر طلباً</p>
+          <p class="hero-badge-name">حقيبة نور</p>
+          <p class="hero-badge-price">749 ر.س</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <section class="features-strip">
+    <div class="container features-inner">
+      <div><div class="feature-ar">جلد طبيعي 100%</div><div class="feature-en">GENUINE LEATHER</div></div>
+      <div><div class="feature-ar">توصيل مجاني +500ر.س</div><div class="feature-en">FREE SHIPPING</div></div>
+      <div><div class="feature-ar">إرجاع خلال 14 يوم</div><div class="feature-en">EASY RETURNS</div></div>
+      <div><div class="feature-ar">دفع آمن</div><div class="feature-en">SECURE PAYMENT</div></div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="products-section">
+    <div class="container">
+      <div class="products-header">
+        <div>
+          <p class="section-tag">المختارات</p>
+          <h2 class="section-title" style="margin-top:0.75rem;">قطع تستحق الاقتناء</h2>
+        </div>
+        <a class="view-all" href="#" onclick="navigate('shop');return false;">عرض الكل ←</a>
+      </div>
+      <div class="products-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- STORY BAND -->
+  <section class="story-band">
+    <div class="container">
+      <div class="story-band-inner">
+        <p class="section-tag">فلسفتنا</p>
+        <h2 class="story-quote" style="margin-top:1.5rem;">
+          "كل امرأة تحمل قصة،<br/>ونحن نُلبسها حقيبة."
+        </h2>
+        <p class="story-text">
+          في تعبير، نؤمن أن الحقيبة ليست مجرد إكسسوار، بل امتداد لروح صاحبتها.
+          نختار خاماتنا بعناية، ونصمم كل قطعة لتدوم وتروي.
+        </p>
+        <a class="btn-accent-outline" href="#" onclick="navigate('about');return false;">تعرفي على تعبير</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">تعبير</div>
+          <div class="footer-brand-en">TA'BEER</div>
+          <p class="footer-brand-desc">اختلافك تعبيرك. حقائب نسائية مختارة بعناية لتروي قصة كل امرأة.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">المتجر</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigate('shop');return false;">جميع الحقائب</a></li>
+            <li><a href="#" onclick="navigate('shop');return false;">الأكثر مبيعاً</a></li>
+            <li><a href="#" onclick="navigate('shop');return false;">الجديد</a></li>
+            <li><a href="#" onclick="navigate('shop');return false;">العروض</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a></li>
+            <li><a href="#" onclick="navigate('about');return false;">سياسة الإرجاع</a></li>
+            <li><a href="#" onclick="navigate('about');return false;">الشحن والتوصيل</a></li>
+            <li><a href="#" onclick="navigate('about');return false;">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">تابعينا</h4>
+          <p class="footer-desc">اشتركي لتصلك أحدث المجموعات وعروض حصرية.</p>
+          <div class="footer-form">
+            <input class="footer-input" type="email" placeholder="بريدك الإلكتروني" />
+            <button class="footer-sub-btn">اشتراك</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 تعبير. جميع الحقوق محفوظة.</p>
+        <p>صُنع بحب في المملكة العربية السعودية 🇸🇦</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     PAGE: SHOP
+     ============================================================ -->
+<div class="page" id="page-shop">
+
+  <!-- Shop Hero -->
+  <section class="shop-hero">
+    <div class="container">
+      <p class="section-tag">المتجر</p>
+      <h1 class="section-title" style="margin-top:1rem;font-size:clamp(2.5rem,5vw,3.75rem);">مجموعة الحقائب</h1>
+      <p style="color:var(--muted-foreground);max-width:36rem;margin:1rem auto 0;">
+        مجموعة كاملة من حقائب تعبير، مختارة لتلبّي ذوقكِ في كل مناسبة.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filters + Grid -->
+  <section style="padding:3rem 0;">
+    <div class="container">
+      <div class="shop-filters" id="shopFilters"></div>
+      <div class="products-grid products-grid-3" id="shopGrid"></div>
+      <p id="emptyMsg" style="display:none;text-align:center;color:var(--muted-foreground);padding:5rem 0;">لا توجد منتجات في هذه الفئة حالياً.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">تعبير</div>
+          <div class="footer-brand-en">TA'BEER</div>
+          <p class="footer-brand-desc">اختلافك تعبيرك.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">المتجر</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigate('shop');return false;">جميع الحقائب</a></li>
+            <li><a href="#" onclick="navigate('shop');return false;">الأكثر مبيعاً</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a></li>
+            <li><a href="#" onclick="navigate('about');return false;">سياسة الإرجاع</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">تابعينا</h4>
+          <p class="footer-desc">اشتركي لتصلك أحدث المجموعات.</p>
+          <div class="footer-form">
+            <input class="footer-input" type="email" placeholder="بريدك الإلكتروني" />
+            <button class="footer-sub-btn">اشتراك</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 تعبير. جميع الحقوق محفوظة.</p>
+        <p>صُنع بحب في المملكة العربية السعودية 🇸🇦</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     PAGE: ABOUT
+     ============================================================ -->
+<div class="page" id="page-about">
+
+  <!-- Story -->
+  <section class="container" style="padding:5rem 1.5rem 0;">
+    <div class="about-hero-grid">
+      <div class="about-content animate-fade-up">
+        <p class="section-tag">قصتنا</p>
+        <h1 class="about-title">وُلدت من<br/><em>شغف الأناقة</em></h1>
+        <p class="about-text">
+          تعبير علامة سعودية وُلدت من إيمان عميق بأن المرأة تستحق أن تُعبّر عن نفسها بكل تفصيل، حتى الحقيبة التي تحملها.
+          بدأت رحلتنا في الرياض بحلم بسيط: أن نقدّم حقائب فاخرة، عملية، وتحمل روحاً عربية أصيلة بلمسات عصرية.
+        </p>
+        <p class="about-text">
+          نختار خاماتنا من أجود أنواع الجلود الطبيعية، ونعمل مع حرفيين متخصصين لضمان أن كل قطعة تخرج من ورشتنا تحمل بصمة من الإتقان.
+        </p>
+      </div>
+      <div class="about-img">
+        <img src="herobag.jpg" alt="عن تعبير" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="values-section">
+    <div class="container">
+      <div class="values-header">
+        <p class="section-tag">قِيَمنا</p>
+        <h2 class="section-title" style="margin-top:0.75rem;">ما يميّز تعبير</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">✦</div>
+          <h3 class="value-title">حرفية أصيلة</h3>
+          <p class="value-text">كل حقيبة تُصنع بأيدي حرفيين خبراء، بعناية تُلامس التفاصيل.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">✧</div>
+          <h3 class="value-title">خامات فاخرة</h3>
+          <p class="value-text">جلود طبيعية مختارة بعناية، إكسسوارات معدنية مطلية بأعلى جودة.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">❖</div>
+          <h3 class="value-title">هويّة عربية</h3>
+          <p class="value-text">تصاميم تستلهم من جمال المرأة العربية وذوقها الراقي.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promise -->
+  <section>
+    <div class="container" style="padding:6rem 1.5rem;">
+      <div style="text-align:center;max-width:40rem;margin:0 auto;">
+        <p class="section-tag">وعدنا</p>
+        <h2 class="promise-title" style="margin-top:1rem;">جودة تدوم، وأناقة لا تُنسى</h2>
+        <p class="promise-text">
+          نضمن لكِ توصيلاً سريعاً خلال 48 ساعة لجميع مدن المملكة، وإمكانية الإرجاع خلال 14 يوماً، ودعمًا متواصلاً يجعل تجربتك مع تعبير لا تُنسى.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">تعبير</div>
+          <div class="footer-brand-en">TA'BEER</div>
+          <p class="footer-brand-desc">اختلافك تعبيرك.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">المتجر</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigate('shop');return false;">جميع الحقائب</a></li>
+            <li><a href="#" onclick="navigate('shop');return false;">الجديد</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a></li>
+            <li><a href="#" onclick="navigate('about');return false;">سياسة الإرجاع</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">تابعينا</h4>
+          <p class="footer-desc">اشتركي لتصلك أحدث المجموعات.</p>
+          <div class="footer-form">
+            <input class="footer-input" type="email" placeholder="بريدك الإلكتروني" />
+            <button class="footer-sub-btn">اشتراك</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 تعبير. جميع الحقوق محفوظة.</p>
+        <p>صُنع بحب في المملكة العربية السعودية 🇸🇦</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     PAGE: CONTACT
+     ============================================================ -->
+<div class="page" id="page-contact">
+  <section style="padding:5rem 1.5rem;">
+    <div class="container">
+      <div class="contact-header animate-fade-up">
+        <p class="section-tag">تواصلي معنا</p>
+        <h1 class="section-title" style="margin-top:1rem;font-size:clamp(2.5rem,5vw,3.75rem);">نحن هنا لكِ</h1>
+        <p style="color:var(--muted-foreground);max-width:36rem;margin:1rem auto 0;">
+          سواء كان لديكِ استفسار، طلب خاص، أو ترغبين في التعاون معنا، يسعدنا سماع صوتكِ.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form-card">
+          <div id="formWrap">
+            <h2 class="form-title">أرسلي رسالتكِ</h2>
+            <form onsubmit="submitContact(event)">
+              <div class="form-group">
+                <label class="form-label">الاسم</label>
+                <input required type="text" class="form-input" placeholder="اسمكِ الكامل" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">البريد الإلكتروني</label>
+                <input required type="email" class="form-input" placeholder="email@example.com" dir="ltr" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">رقم الجوال</label>
+                <input type="tel" class="form-input" placeholder="05xxxxxxxx" dir="ltr" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">الرسالة</label>
+                <textarea required rows="5" class="form-textarea" placeholder="اكتبي رسالتكِ هنا..."></textarea>
+              </div>
+              <button type="submit" class="btn-form">إرسال الرسالة</button>
+            </form>
+          </div>
+          <div class="contact-success" id="successMsg" style="display:none;">
+            <div class="success-icon">✦</div>
+            <h3 class="success-title">شكراً لتواصلكِ</h3>
+            <p class="success-text">سنعود إليكِ خلال 24 ساعة.</p>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info">
+          <div>
+            <h3 class="info-title">معلومات التواصل</h3>
+            <p class="info-sub">فريقنا متاح للرد على استفساراتكِ يومياً.</p>
+          </div>
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div>
+                <p class="info-label">الموقع</p>
+                <p class="info-value">الرياض، المملكة العربية السعودية</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">✉</div>
+              <div>
+                <p class="info-label">البريد الإلكتروني</p>
+                <p class="info-value" dir="ltr">hello@tabeer.sa</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">☎</div>
+              <div>
+                <p class="info-label">الواتساب</p>
+                <p class="info-value" dir="ltr">+966 50 000 0000</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🕐</div>
+              <div>
+                <p class="info-label">ساعات العمل</p>
+                <p class="info-value">السبت - الخميس: 9 ص - 9 م</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-card">
+            <p class="social-title">تابعينا</p>
+            <p class="social-handle">@tabeer.sa على إنستقرام وسناب شات وتيك توك</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">تعبير</div>
+          <div class="footer-brand-en">TA'BEER</div>
+          <p class="footer-brand-desc">اختلافك تعبيرك.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">المتجر</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigate('shop');return false;">جميع الحقائب</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">خدمة العملاء</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="navigate('contact');return false;">تواصلي معنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">تابعينا</h4>
+          <p class="footer-desc">اشتركي لتصلك أحدث المجموعات.</p>
+          <div class="footer-form">
+            <input class="footer-input" type="email" placeholder="بريدك الإلكتروني" />
+            <button class="footer-sub-btn">اشتراك</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 تعبير. جميع الحقوق محفوظة.</p>
+        <p>صُنع بحب في المملكة العربية السعودية 🇸🇦</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+  /* ── Data ───────────────────────────────────────────── */
+  const products = [
+    { id:'noor',   name:'حقيبة نور',   category:'توت',   price:749,  image:'bag1.jpg', desc:'حقيبة توت من الجلد الطبيعي بلون البيج الدافئ.', isBestseller:true },
+    { id:'lulwa',  name:'حقيبة لؤلؤة', category:'كتف',   price:899, oldPrice:1099, image:'bag2.jpg', desc:'حقيبة كتف مبطّنة باللون الأسود مع سلسلة ذهبية فاخرة.', isBestseller:true },
+    { id:'rimas',  name:'حقيبة ريماس', category:'كروس',  price:629,  image:'bag3.jpg', desc:'حقيبة كروس بلون الكراميل من الجلد المنظم.', isNew:true },
+    { id:'warood', name:'حقيبة ورود',  category:'ميني',  price:549,  image:'bag4.jpg', desc:'حقيبة ميني من الشمواه الوردي مع تفاصيل ذهبية ناعمة.', isNew:true },
+    { id:'yasmin', name:'حقيبة ياسمين',category:'باكيت', price:679,  image:'bag5.jpg', desc:'حقيبة باكيت بلون العاج بتصميم درّاوسترينج.' },
+    { id:'rubab',  name:'حقيبة رباب',  category:'هوبو',  price:819, oldPrice:999, image:'bag6.jpg', desc:'حقيبة هوبو بلون النبيذ العميق من الجلد الفاخر.' },
+  ];
+
+  const categories = [
+    { id:'all', name:'الكل' }, { id:'توت', name:'توت' }, { id:'كتف', name:'كتف' },
+    { id:'كروس', name:'كروس' }, { id:'ميني', name:'ميني' }, { id:'باكيت', name:'باكيت' }, { id:'هوبو', name:'هوبو' },
+  ];
+
+  /* ── Card HTML ──────────────────────────────────────── */
+  function productCard(p) {
+    const newBadge   = p.isNew          ? `<span class="badge badge-new">جديد</span>` : '';
+    const bestBadge  = p.isBestseller && !p.isNew ? `<span class="badge badge-best">الأكثر مبيعاً</span>` : '';
+    const saleBadge  = p.oldPrice       ? `<span class="badge-sale">خصم</span>` : '';
+    const oldPrice   = p.oldPrice       ? `<span class="product-old-price">${p.oldPrice} ر.س</span>` : '';
+    return `
+      <div class="product-card" onclick="navigate('shop')">
+        <div class="product-img-wrap">
+          <img class="product-img-inner" src="${p.image}" alt="${p.name}" loading="lazy"/>
+          ${newBadge}${bestBadge}${saleBadge}
+          <div class="product-overlay">
+            <button class="product-overlay-btn">عرض التفاصيل</button>
+          </div>
+        </div>
+        <p class="product-category">${p.category}</p>
+        <h3 class="product-name">${p.name}</h3>
+        <div class="product-pricing">
+          <span class="product-price">${p.price} ر.س</span>
+          ${oldPrice}
+        </div>
+      </div>`;
+  }
+
+  /* ── Init grids ─────────────────────────────────────── */
+  function initFeatured() {
+    const grid = document.getElementById('featuredGrid');
+    grid.innerHTML = products.slice(0,4).map(productCard).join('');
+  }
+
+  let activeFilter = 'all';
+  function initShop() {
+    // Filters
+    const filtersEl = document.getElementById('shopFilters');
+    filtersEl.innerHTML = categories.map(c =>
+      `<button class="filter-btn${c.id === activeFilter ? ' active' : ''}" onclick="setFilter('${c.id}')">${c.name}</button>`
+    ).join('');
+    // Grid
+    const filtered = activeFilter === 'all' ? products : products.filter(p => p.category === activeFilter);
+    const grid = document.getElementById('shopGrid');
+    grid.innerHTML = filtered.map(productCard).join('');
+    document.getElementById('emptyMsg').style.display = filtered.length === 0 ? 'block' : 'none';
+  }
+
+  function setFilter(id) {
+    activeFilter = id;
+    initShop();
+  }
+
+  /* ── Navigation ─────────────────────────────────────── */
+  function navigate(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+
+    document.querySelectorAll('.nav-link').forEach(a => {
+      a.classList.toggle('active', a.dataset.page === page);
+    });
+
+    document.getElementById('mobileNav').classList.remove('open');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (page === 'shop') initShop();
+  }
+
+  function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  /* ── Contact form ───────────────────────────────────── */
+  function submitContact(e) {
+    e.preventDefault();
+    document.getElementById('formWrap').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  }
+
+  /* ── Boot ───────────────────────────────────────────── */
+  initFeatured();
+</script>
+</body>
+</html>
